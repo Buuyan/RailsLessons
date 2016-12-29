@@ -74,7 +74,7 @@
 
         // meに"complete"イベントを定義
         me.on("complete", function(file) {
-          $(file.previewTemplete).find('.dz-remove').text("削除する");
+          $(file.previewTemplate).find('.dz-remove').text("削除する");
         });
         // call list function in photos_controller.rb with get method
         $.ajax({
@@ -84,7 +84,7 @@
               dataType: 'json',
           success: function(data){
               $.each(data.images, function(key, value) {
-                if (data.images != undefined && data.iamges.length > 0) {
+                if (data.images != undefined && data.images.length > 0) {
                   me.emit("addedfile", value); // addedfileイベントをvalueのデータで実行する
                   me.emit("thumbnail", value, value.src); // thumbnailイベントをvalueデータで実行する
                   me.emit("complete", value); //completeイベントをvalueのデータで実行する

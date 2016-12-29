@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'aws-sdk', '~> 2.3'
-
 group :production do
     gem 'pg'
     gem 'rails_12factor'
@@ -15,6 +13,14 @@ end
 group :development, :test do
     gem 'sqlite3'
 end
+
+gem 'stripe'
+
+gem 'jquery-ui-rails'
+
+gem 'geocoder'
+
+gem 'aws-sdk', '~> 2.3'
 
 gem "figaro", "~> 1.1.0"
 
@@ -29,6 +35,9 @@ gem 'omniauth-facebook'
 gem 'devise'
 
 gem 'toastr-rails'
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
