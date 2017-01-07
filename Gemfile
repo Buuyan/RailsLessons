@@ -14,6 +14,11 @@ group :development, :test do
     gem 'sqlite3'
 end
 
+gem 'ransack'
+
+gem 'private_pub'
+gem 'thin'
+
 gem 'stripe'
 
 gem 'jquery-ui-rails'

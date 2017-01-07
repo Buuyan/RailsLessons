@@ -33,3 +33,11 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  <% if @listing.not_checked %>
+    $(function(){
+        $('select#listing_active').attr('disabled', 'disabled');
+    });
+  <% end %>
+</script>
